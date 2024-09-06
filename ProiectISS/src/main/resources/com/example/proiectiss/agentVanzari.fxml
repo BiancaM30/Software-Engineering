@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proiectiss.AgentController">
+    <children>
+        <Button layoutX="390.0" layoutY="319.0" mnemonicParsing="false" onAction="#comandaButtonClicked" prefHeight="25.0" prefWidth="114.0" style="-fx-background-color: #7e76b8; -fx-text-fill: white;" text="Comanda" />
+        <Label layoutX="178.0" layoutY="32.0" text="Autentificat ca agent de vanzari" textFill="#7e76b8">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Button layoutX="75.0" layoutY="319.0" mnemonicParsing="false" onAction="#ConsultaButtonClicked" prefHeight="25.0" prefWidth="158.0" style="-fx-background-color: #7e76b8; -fx-text-fill: white;" text="Consulta catalog" />
+        <TableView fx:id="tableViewProducts" layoutX="17.0" layoutY="111.0" prefHeight="200.0" prefWidth="322.0">
+            <columns>
+                <TableColumn fx:id="tableColumnName" prefWidth="136.00006103515625" text="Nume " />
+                <TableColumn fx:id="tableColumnPrice" prefWidth="87.33331298828125" text="Pret" />
+                <TableColumn fx:id="tableColumnQuantity" prefWidth="97.3333740234375" text="In stoc" />
+            </columns>
+        </TableView>
+        <TextField fx:id="nameTextField" layoutX="362.0" layoutY="136.0" prefHeight="25.0" prefWidth="182.0" promptText="nume" />
+        <TextField fx:id="priceTextField" layoutX="362.0" layoutY="174.0" prefHeight="25.0" prefWidth="182.0" promptText="pret" />
+        <TextField fx:id="quantityTextField" layoutX="362.0" layoutY="211.0" prefHeight="25.0" prefWidth="182.0" promptText="cantitate dorita (default: 1)" />
+      <Label layoutX="361.0" layoutY="258.0" text="Taxa livrare: ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="361.0" layoutY="279.0" text="Pret total:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDelivery" layoutX="439.0" layoutY="258.0" />
+      <Label fx:id="lblTotalPrice" layoutX="439.0" layoutY="279.0" />
+      <Button layoutX="17.0" layoutY="14.0" mnemonicParsing="false" onAction="#logoutButtonClicked" text="Logout" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="440.0" prefWidth="732.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proiectiss.AdministratorController">
+    <children>
+        <!--      <Button fx:id="addButton" layoutX="346.0" layoutY="324.0" mnemonicParsing="false" onAction="#addButtonClicked" prefHeight="25.0" prefWidth="66.0" style="-fx-background-color: #7e76b8; -fx-text-fill: white;" text="Adauga " />-->
+        <!--      <Button layoutX="503.0" layoutY="324.0" mnemonicParsing="false" onAction="#deleteButtonClicked" prefHeight="25.0" prefWidth="66.0" style="-fx-background-color: #7e76b8; -fx-text-fill: white;" text="Sterge" />-->
+        <!--      <Button layoutX="423.0" layoutY="324.0" mnemonicParsing="false" onAction="#updateButtonClicked" prefHeight="25.0" prefWidth="66.0" style="-fx-background-color: #7e76b8; -fx-text-fill: white;" text="Modifica " />-->
+
+        <Button fx:id="addButton" layoutX="347.0" layoutY="342.0" mnemonicParsing="false" onAction="#addButtonClicked" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #7e76b8; -fx-text-fill: white;" text="Adauga " />
+        <Button layoutX="558.0" layoutY="342.0" mnemonicParsing="false" onAction="#deleteButtonClicked" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #7e76b8; -fx-text-fill: white;" text="Sterge" />
+        <Button layoutX="450.0" layoutY="342.0" mnemonicParsing="false" onAction="#updateButtonClicked" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #7e76b8; -fx-text-fill: white;" text="Modifica " />
+
+        <Label layoutX="269.0" layoutY="80.0" text="Autentificat ca administrator" textFill="#7e76b8">-->
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Button layoutX="78.0" layoutY="387.0" mnemonicParsing="false" onAction="#ConsultaButtonClicked" prefHeight="25.0" prefWidth="158.0" style="-fx-background-color: #7e76b8; -fx-text-fill: white;" text="Consulta catalog" />
+        <TableView fx:id="tableViewProducts" layoutX="17.0" layoutY="174.0" prefHeight="200.0" prefWidth="322.0">
+            <columns>
+                <TableColumn fx:id="tableColumnName" prefWidth="136.00006103515625" text="Nume " />
+                <TableColumn fx:id="tableColumnPrice" prefWidth="87.33331298828125" text="Pret" />
+                <TableColumn fx:id="tableColumnQuantity" prefWidth="97.3333740234375" text="Cantitate" />
+            </columns>
+        </TableView>
+        <TextField fx:id="nameTextField" layoutX="427.0" layoutY="185.0" prefHeight="25.0" prefWidth="182.0" promptText="nume" />
+        <TextField fx:id="priceTextField" layoutX="427.0" layoutY="233.0" prefHeight="25.0" prefWidth="182.0" promptText="pret" />
+        <TextField fx:id="quantityTextField" layoutX="427.0" layoutY="281.0" prefHeight="25.0" prefWidth="182.0" promptText="cantitate" />
+        <Button layoutX="17.0" layoutY="14.0" mnemonicParsing="false" onAction="#logoutButtonClicked" text="Logout" />
+    </children>
+</AnchorPane>

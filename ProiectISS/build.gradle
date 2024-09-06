@@ -1,0 +1,55 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.10'
+}
+
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    junitVersion = '5.7.1'
+}
+
+sourceCompatibility = '17'
+targetCompatibility = '17'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+application {
+    mainModule = 'com.example.proiectiss'
+    mainClass = 'com.example.proiectiss.HelloApplication'
+}
+
+javafx {
+    version = '17.0.0.1'
+    modules = ['javafx.controls', 'javafx.fxml']
+}
+
+dependencies {
+    implementation('org.controlsfx:controlsfx:11.1.0')
+    implementation('com.dlsc.formsfx:formsfx-core:11.3.2') {
+        exclude(group: 'org.openjfx')
+    }
+    implementation('org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0')
+
+    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+
+//    implementation group: 'com.google.guava', name: 'guava', version: '31.0.1-jre'
+   // runtimeOnly group: 'org.xerial', name: 'sqlite-jdbc', version: '3.36.0.3'
+    implementation 'org.postgresql:postgresql:42.3.1'
+    runtimeOnly group: 'org.xerial', name: 'sqlite-jdbc', version: '3.16.1'
+    implementation 'org.xerial:sqlite-jdbc:3.36.0.3'
+    implementation 'com.j256.ormlite:ormlite-jdbc:6.1'
+}
+
+test {
+    useJUnitPlatform()
+}
