@@ -4,6 +4,21 @@
 
 This project implements a **Products Ordering System (POS)** designed to streamline product management for sales agents and company administrators. It allows users to manage products, place orders, and process payments in a simplified, easy-to-use interface.
 
+## UI Prototypes
+
+### Login Page
+![Login Page](./images/login.png)
+
+### Administrator's Dashboard
+![Admin Dashboard](./images/admin_dashboard.png)
+
+### Sales Agent's Dashboard
+![Sales Agent Dashboard](./images/sales_dashboard.png)
+
+### Order Placement and Payment
+![Order Placement](./images/order_placement.png)
+![Payment Process](./images/payment_image.png)
+
 ## Features
 
 1. **Authentication**  
@@ -71,17 +86,3 @@ This project implements a **Products Ordering System (POS)** designed to streaml
    - Implement product modification.
    - Implement credit card and PayPal payments.
 
-## UI Prototypes
-
-### Login Page
-![Login Page](./images/login.png)
-
-### Administrator's Dashboard
-![Admin Dashboard](./images/admin_dashboard.png)
-
-### Sales Agent's Dashboard
-![Sales Agent Dashboard](./images/sales_dashboard.png)
-
-### Order Placement and Payment
-![Order Placement](./images/order_placement.png)
-![Payment Process](./images/payment_image.png)
