@@ -84,4 +84,4 @@ This project implements a **Products Ordering System (POS)** designed to streaml
 
 ### Order Placement and Payment
 ![Order Placement](./images/order_placement.png)
-![Payment Process](./images/payment.png)
+![Payment Process](./images/payment_image.png)
